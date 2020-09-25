@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  user-select: none;
+}
+
+/* STYLE FOR CONTAINER HOLDING CARDS(GAME */
+.memoryGame {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 70%;
+  height: 650px;
+  background: white;
+  justify-content: space-evenly;
+}
+
+/* STYLE FOR EACH CARD */
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  height: 200px;
+  width: 125px;
+  margin: 2px;
+  border: solid 1px black;
+  border-radius: 8px;
+  transform: scale(1);
+  background: blue;
+  color: blue;
+  cursor: pointer;
+}
+
+/* CLASS TO ADD AFTER CLICK */
+.showText {
+  color: black;
+}
+
+/* NEW GAME SCREEN */
+#modal {
+  position: fixed;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  height: 100%;
+  width: 100%;
+}
+
+#modal p {
+  font-size: 75px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+.modalContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ad33ff;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#buttonModal {
+  margin-top: 35px;
+  background-color: #37487c;
+  color: white;
+  border-radius: 4px;
+  font-size: 20px;
+  height: 70px;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+}
+
+#buttonModal:hover {
+  background-color: black;
+}
