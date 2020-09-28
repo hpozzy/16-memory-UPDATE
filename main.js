@@ -50,7 +50,12 @@ function unflipCards() {
     cardTwo.classList.remove("showText")
 
     stopClicks = false
-  }, 1500)
+  }, 1000)
+  document.querySelector("#livesLeft").innerHTML =
+    "Lives Remaining: " + (lives -= 1)
+  if (lives === 0) {
+    alert("UR MEMORY TRASH & PLEASE RELOAD THE PAGE")
+  }
 }
 ;(function shuffle() {
   cards.forEach((card) => {
